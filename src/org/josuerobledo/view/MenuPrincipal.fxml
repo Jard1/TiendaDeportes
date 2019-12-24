@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuerobledo.controller.MenuPrincipalController">
+    <children>
+      <MenuBar fx:id="MenuBar" layoutY="-3.0" prefHeight="25.0" prefWidth="701.0">
+         <menus>
+            <Menu fx:id="opcion1" mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem fx:id="submenuCategoria" mnemonicParsing="false" onAction="#VentanaCategoria" text="Categorias" />
+                  <MenuItem fx:id="submenuMarca" mnemonicParsing="false" onAction="#VentanaMarcas" text="Marcas" />
+                  <MenuItem fx:id="submenuTalla" mnemonicParsing="false" onAction="#VentanaTallas" text="Tallas" />
+                  <MenuItem fx:id="submenuProductos" mnemonicParsing="false" onAction="#VentanaProductos" text="Productos" />
+                  
+                  
+                    <Menu mnemonicParsing="false" text="Proveedores">
+                        <items>
+                        <MenuItem fx:id="submenuProveedores" mnemonicParsing="false" onAction="#VentanaProveedores" text="Proveedores" />    
+                             <MenuItem fx:id="submenuTelefonoProveedores" mnemonicParsing="false" onAction="#VentanaTelefonoProveedores" text="Telefono Proveedores" />
+                             <MenuItem fx:id="submenuCorreoProveedores" mnemonicParsing="false" onAction="#CorreoTelefonoProveedores" text="Correo Proveedores" />
+                         </items>
+                    </Menu>
+                  <Menu fx:id="OpcionClientes" mnemonicParsing="false" text="Clientes">
+                     <items>
+                        <MenuItem fx:id="submenuClientes" mnemonicParsing="false" onAction="#VentanaClientes" text="Clientes" />
+                        <MenuItem fx:id="submenuTelefonoClientes" mnemonicParsing="false" onAction="#VentanaTelefonoClientes" text="Telefono Clientes" />
+                        <MenuItem fx:id="submenuCorreoClientes" mnemonicParsing="false" onAction="#VentanaCorreoClientes" text="Correo Clientes" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="OpcionFacturas" mnemonicParsing="false" text="Facturas">
+                     <items>
+                        <MenuItem fx:id="submenuFacturas" mnemonicParsing="false" onAction="#VentanaFacturas" text="Facturas" />
+                        <MenuItem fx:id="submenuDetalleFacturas" mnemonicParsing="false" onAction="#VentanaDetalleFacturas" text="Detalle Facturas" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="OpcionCompras" mnemonicParsing="false" text="Compras">
+                     <items>
+                        <MenuItem fx:id="submenuCompras" mnemonicParsing="false" onAction="#VentanaCompras" text="Compras" />
+                        <MenuItem fx:id="submenuDetalleCompras" mnemonicParsing="false" onAction="#VentanaDetalleCompras" text="Detalle Compras" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reporte">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="En Construccion xd" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Acerca de">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Creditos" text="Creditos" />
+                  <MenuItem mnemonicParsing="false" onAction="#Versiones" text="Version" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fitHeight="490.0" fitWidth="701.0" layoutY="23.0">
+         <image>
+            <Image url="@../imagenes/Fondo1.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

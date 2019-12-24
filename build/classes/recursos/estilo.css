@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9/05/2017, 08:44:17 AM
+    Author     : informatica
+*/
+
+.button {
+	-fx--moz-box-shadow: 0px 1px 0px 0px #fff6af;
+	-fx--webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+	-fx-box-shadow: 0px 1px 0px 0px #fff6af;
+	-fx-background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+	-fx-background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	-fx-background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	-fx-background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	-fx-background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+	-fx-background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	-fx-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+	-fx-background-color:#ffec64;
+	-fx--moz-border-radius:6px;
+	-fx--webkit-border-radius:6px;
+	-fx-border-radius:6px;
+	-fx-border:1px solid #ffaa22;
+	-fx-display:inline-block;
+	-fx-cursor:pointer;
+	-fx-color:#333333;
+	-fx-font-family:Arial;
+	-fx-font-size:15px;
+	-fx-font-weight:bold;
+	-fx-padding:6px 24px;
+	-fx-text-decoration:none;
+	-fx-text-shadow:0px 1px 0px #ffee66;
+}
+.button:hover {
+	-fx-background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+	-fx-background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	-fx-background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	-fx-background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	-fx-background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+	-fx-background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	-fx-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+	-fx-background-color:#ffab23;
+}
+.button:active {
+	-fx-position:relative;
+	-fx-top:1px;
+}

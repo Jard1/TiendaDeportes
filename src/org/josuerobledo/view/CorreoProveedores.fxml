@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuerobledo.controller.CorreoProveedoresController">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="589.0" layoutX="-69.0">
+         <image>
+            <Image url="@../imagenes/2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="106.0" layoutY="102.0" prefHeight="33.0" prefWidth="51.0" text="Codigo">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigo" layoutX="167.0" layoutY="106.0" prefHeight="25.0" prefWidth="240.0" />
+      <Button fx:id="btnRegresar" layoutX="374.0" layoutY="465.0" mnemonicParsing="false" onAction="#BotonRegresar" prefHeight="33.0" prefWidth="74.0" text="Regresar" />
+      <TextField fx:id="txtDescripcion" layoutX="167.0" layoutY="206.0" prefHeight="26.0" prefWidth="240.0" />
+      <Label layoutX="86.0" layoutY="202.0" prefHeight="33.0" prefWidth="74.0" text="Descripcion">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="44.0" prefHeight="50.0" prefWidth="318.0" text="Correo Proveedores">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="172.0" prefHeight="33.0" prefWidth="58.0" text="Correo">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCorreo" layoutX="167.0" layoutY="175.0" prefHeight="26.0" prefWidth="240.0" />
+      <TableView fx:id="tblCorreoProveedores" layoutX="50.0" layoutY="248.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="430.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="85.0" text="Codigo" />
+            <TableColumn fx:id="colProveedor" prefWidth="123.0" text="Proveedor" />
+            <TableColumn fx:id="colCorreo" prefWidth="109.0" text="Correo" />
+            <TableColumn fx:id="colDescripcion" prefWidth="112.0" text="Descripcion" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnEditar" layoutX="285.0" layoutY="465.0" mnemonicParsing="false" onAction="#BotonEditar" prefHeight="33.0" prefWidth="74.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="193.0" layoutY="465.0" mnemonicParsing="false" onAction="#BotonEliminar" prefHeight="33.0" prefWidth="74.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="102.0" layoutY="465.0" mnemonicParsing="false" onAction="#BotonNuevo" prefHeight="33.0" prefWidth="74.0" text="Nuevo" />
+      <ComboBox fx:id="cmbProveedor" layoutX="167.0" layoutY="139.0" prefHeight="25.0" prefWidth="240.0" promptText="Seleccion el Proveedor..." />
+      <Label layoutX="92.0" layoutY="135.0" prefHeight="33.0" prefWidth="68.0" text="Proveedor">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imaInicio" fitHeight="33.0" fitWidth="33.0" layoutX="455.0" layoutY="465.0" onMouseClicked="#RegresarInicio">
+         <image>
+            <Image url="@../imagenes/Inicio.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

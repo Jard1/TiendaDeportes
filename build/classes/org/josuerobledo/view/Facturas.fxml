@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuerobledo.controller.FacturasController">
+   <children>
+      <ImageView fitHeight="542.0" fitWidth="750.0">
+         <image>
+            <Image url="@../imagenes/2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="138.0" layoutY="82.0" prefHeight="33.0" prefWidth="52.0" text="Numero">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbNumero" layoutX="198.0" layoutY="86.0" onAction="#seleccionarCombobox" prefHeight="25.0" prefWidth="421.0" />
+      <ImageView fx:id="imaInicio" fitHeight="33.0" fitWidth="33.0" layoutX="672.0" layoutY="484.0" onMouseClicked="#RegresarInicio">
+         <image>
+            <Image url="@../imagenes/Inicio.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNit" layoutX="445.0" layoutY="157.0" prefHeight="26.0" prefWidth="178.0" />
+      <Label layoutX="295.0" layoutY="23.0" prefHeight="50.0" prefWidth="170.0" text="FACTURAS">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="154.0" prefHeight="33.0" prefWidth="44.0" text="Fecha">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="154.0" prefHeight="33.0" prefWidth="38.0" text="Nit">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="509.0" prefHeight="33.0" prefWidth="52.0" />
+      <Button fx:id="btnNuevo" layoutX="308.0" layoutY="484.0" mnemonicParsing="false" onAction="#BotonNuevo" prefHeight="33.0" prefWidth="74.0" text="Nuevo" />
+      <TableView fx:id="tblFacturas" layoutX="42.0" layoutY="254.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="213.0" prefWidth="662.0">
+         <columns>
+            <TableColumn fx:id="colNumero" prefWidth="119.0" text="Numero" />
+            <TableColumn fx:id="ColCliente" prefWidth="120.0" text="Cliente" />
+            <TableColumn fx:id="ColFecha" prefWidth="120.0" text="Fecha" />
+            <TableColumn fx:id="ColNit" prefWidth="106.0" text="Nit" />
+            <TableColumn fx:id="ColEstado" prefWidth="106.0" text="Estado" />
+            <TableColumn fx:id="ColTotal" prefWidth="89.0" text="Total" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnEditar" layoutX="500.0" layoutY="484.0" mnemonicParsing="false" onAction="#BotonEditar" prefHeight="33.0" prefWidth="74.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="400.0" layoutY="484.0" mnemonicParsing="false" onAction="#BotonEliminar" prefHeight="33.0" prefWidth="74.0" text="Eliminar" />
+      <TextField fx:id="txtEstado" layoutX="200.0" layoutY="204.0" prefHeight="26.0" prefWidth="178.0" />
+      <Label layoutX="146.0" layoutY="201.0" prefHeight="33.0" prefWidth="44.0" text="Estado">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCliente" layoutX="198.0" layoutY="119.0" prefHeight="25.0" prefWidth="421.0" promptText="Selecione un Cliente..." />
+      <Label layoutX="138.0" layoutY="115.0" prefHeight="33.0" prefWidth="52.0" text="Cliente">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="DPFecha" layoutX="202.0" layoutY="162.0" />
+      <Button fx:id="btnReporte" layoutX="586.0" layoutY="484.0" mnemonicParsing="false" onAction="#BotonReporte" prefHeight="33.0" prefWidth="74.0" text="Reporte" />
+      <Button fx:id="btnDetalle" layoutX="449.0" layoutY="201.0" mnemonicParsing="false" onAction="#VentanaDetalle" prefHeight="33.0" prefWidth="111.0" text="Detalle Factura" />
+   </children>
+</AnchorPane>

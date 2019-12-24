@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuerobledo.controller.DetalleFacturaController">
+   <children>
+      <ImageView fitHeight="559.0" fitWidth="602.0" layoutY="-4.0">
+         <image>
+            <Image url="@../imagenes/2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="178.0" prefHeight="33.0" prefWidth="58.0" text="Producto">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbProducto" layoutX="101.0" layoutY="182.0" prefHeight="25.0" prefWidth="421.0" promptText="Selecione un Producto..." />
+      <Button fx:id="btnEliminar" layoutX="280.0" layoutY="503.0" mnemonicParsing="false" onAction="#BotonEliminar" prefHeight="33.0" prefWidth="74.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="368.0" layoutY="503.0" mnemonicParsing="false" onAction="#BotonEditar" prefHeight="33.0" prefWidth="74.0" text="Editar" />
+      <TableView fx:id="tblDetalleFactura" layoutX="21.0" layoutY="276.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="213.0" prefWidth="561.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="119.0" text="Codigo" />
+            <TableColumn fx:id="ColPrecio" prefWidth="120.0" text="Precio" />
+            <TableColumn fx:id="ColCantidad" prefWidth="120.0" text="Cantidad" />
+            <TableColumn fx:id="ColFactura" prefWidth="106.0" text="Factura" />
+            <TableColumn fx:id="ColProducto" prefWidth="106.0" text="Producto" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="188.0" layoutY="503.0" mnemonicParsing="false" onAction="#BotonNuevo" prefHeight="33.0" prefWidth="74.0" text="Nuevo" />
+      <Label layoutX="43.0" layoutY="219.0" prefHeight="33.0" prefWidth="52.0" text="Cantidad">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="33.0" prefHeight="50.0" prefWidth="306.0" text="DETALLE FACTURA">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCantidad" layoutX="97.0" layoutY="222.0" prefHeight="26.0" prefWidth="156.0" />
+      <ImageView fx:id="imaInicio" fitHeight="33.0" fitWidth="33.0" layoutX="541.0" layoutY="503.0" onMouseClicked="#RegresarInicio">
+         <image>
+            <Image url="@../imagenes/Inicio.jpg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigo" layoutX="104.0" layoutY="96.0" prefHeight="25.0" prefWidth="421.0" />
+      <Label layoutX="52.0" layoutY="92.0" prefHeight="33.0" prefWidth="52.0" text="Codigo">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbFactura" layoutX="101.0" layoutY="141.0" prefHeight="25.0" prefWidth="421.0" promptText="Selecione una Factura..." />
+      <Label layoutX="52.0" layoutY="137.0" prefHeight="33.0" prefWidth="52.0" text="Factura">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegresar" layoutX="453.0" layoutY="503.0" mnemonicParsing="false" onAction="#BotonRegresar" prefHeight="33.0" prefWidth="74.0" text="Regresar" />
+   </children>
+</AnchorPane>

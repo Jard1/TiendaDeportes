@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuerobledo.controller.ProductosController">
+   <children>
+      <ImageView fitHeight="607.0" fitWidth="818.0">
+         <image>
+            <Image url="@../imagenes/2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="255.0" layoutY="21.0" prefHeight="43.0" prefWidth="221.0" text="PRODUCTOS">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="170.0" layoutY="141.0" prefHeight="26.0" prefWidth="459.0" />
+      <Label layoutX="83.0" layoutY="137.0" prefHeight="33.0" prefWidth="74.0" text="Descripcion">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="490.0" prefHeight="33.0" prefWidth="52.0" />
+      <ComboBox fx:id="cmbMarca" layoutX="165.0" layoutY="184.0" prefHeight="26.0" prefWidth="184.0" />
+      <ComboBox fx:id="cmbCategoria" layoutX="442.0" layoutY="182.0" prefHeight="26.0" prefWidth="184.0" />
+      <ComboBox fx:id="cmbTalla" layoutX="163.0" layoutY="231.0" prefHeight="26.0" prefWidth="184.0" />
+      <Button fx:id="btnNuevo" layoutX="401.0" layoutY="546.0" mnemonicParsing="false" onAction="#BotonNuevo" prefHeight="33.0" prefWidth="74.0" text="Nuevo" />
+      <Label layoutX="121.0" layoutY="178.0" prefHeight="33.0" prefWidth="46.0" text="Marca">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="377.0" layoutY="178.0" prefHeight="33.0" prefWidth="65.0" text="Categoria">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="227.0" prefHeight="33.0" prefWidth="35.0" text="Talla">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblProductos" layoutX="26.0" layoutY="310.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="213.0" prefWidth="759.0">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="83.0" text="Codigo" />
+          <TableColumn fx:id="colNombre" prefWidth="83.0" text="Descripcion" />
+          <TableColumn fx:id="colCategoria" prefWidth="74.0" text="Categoria" />
+            <TableColumn fx:id="colMarca" prefWidth="68.0" text="Marca" />
+            <TableColumn fx:id="colTalla" prefWidth="54.0" text="Talla" />
+            <TableColumn fx:id="colPrecioU" prefWidth="91.0" text="Precio unitario" />
+            <TableColumn fx:id="colPrecio12" prefWidth="112.0" text="Precio por docena" />
+            <TableColumn fx:id="colPrecioMayor" prefWidth="112.0" text="Precio por mayor" />
+            <TableColumn fx:id="colExistencia" prefWidth="81.0" text="Existencia" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnEditar" layoutX="565.0" layoutY="546.0" mnemonicParsing="false" onAction="#BotonEditar" prefHeight="33.0" prefWidth="74.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="482.0" layoutY="546.0" mnemonicParsing="false" onAction="#BotonEliminar" prefHeight="33.0" prefWidth="74.0" text="Eliminar" />
+      <Label layoutX="111.0" layoutY="94.0" prefHeight="33.0" prefWidth="46.0" text="Codigo">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigo" layoutX="167.0" layoutY="98.0" onAction="#seleccionarCombobox" prefHeight="26.0" prefWidth="459.0" />
+      <ImageView fx:id="imaInicio" fitHeight="33.0" fitWidth="33.0" layoutX="747.0" layoutY="546.0" onMouseClicked="#RegresarInicio">
+         <image>
+            <Image url="@../imagenes/Inicio.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnReporte" layoutX="651.0" layoutY="546.0" mnemonicParsing="false" onAction="#BotonReporte" prefHeight="33.0" prefWidth="74.0" text="Reporte" />
+      <Label layoutX="383.0" layoutY="228.0" prefHeight="33.0" prefWidth="65.0" text="Ganancia">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbGanancia" layoutX="442.0" layoutY="231.0" prefHeight="26.0" prefWidth="65.0" />
+      <Label layoutX="509.0" layoutY="228.0" prefHeight="33.0" prefWidth="21.0" text="\%">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

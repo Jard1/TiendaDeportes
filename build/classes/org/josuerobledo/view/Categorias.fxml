@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="437.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuerobledo.controller.CategoriasController">
+   <children>
+      <ImageView fitHeight="437.0" fitWidth="567.0">
+         <image>
+            <Image url="@../imagenes/2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="190.0" layoutY="25.0" prefHeight="33.0" prefWidth="221.0" text="CATEGORIAS">
+         <font>
+            <Font size="34.0" /> 
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="114.0" prefHeight="33.0" prefWidth="74.0" text="Descripcion">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="149.0" layoutY="117.0" prefHeight="26.0" prefWidth="394.0" />
+      <TableView fx:id="tvlCategoria" layoutX="41.0" layoutY="160.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="503.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="150.0" text="Codigo Categoria" />
+          <TableColumn fx:id="colDescripcion" prefWidth="352.0" text="Categoria" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="420.0" layoutY="390.0" mnemonicParsing="false" onAction="#BotonReporte" prefHeight="33.0" prefWidth="74.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="331.0" layoutY="390.0" mnemonicParsing="false" onAction="#BotonEditar" prefHeight="33.0" prefWidth="81.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="245.0" layoutY="390.0" mnemonicParsing="false" onAction="#BotonEliminar" prefHeight="33.0" prefWidth="74.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="158.0" layoutY="390.0" mnemonicParsing="false" onAction="#BotonNuevo" prefHeight="33.0" prefWidth="74.0" text="Nuevo" />
+      <ComboBox fx:id="cmbCategoria" layoutX="152.0" layoutY="85.0" onAction="#seleccionarCombobox" prefHeight="25.0" prefWidth="388.0" />
+      <Label layoutX="40.0" layoutY="81.0" prefHeight="33.0" prefWidth="106.0" text="Codigo Categoria">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imaInicio" fitHeight="33.0" fitWidth="33.0" layoutX="502.0" layoutY="390.0" onMouseClicked="#RegresarInicio">
+         <image>
+            <Image url="@../imagenes/Inicio.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

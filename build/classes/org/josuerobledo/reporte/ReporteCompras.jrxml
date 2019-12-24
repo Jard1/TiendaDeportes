@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCompras" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8254f2b7-27d0-4555-beab-f34756d42ea6">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="_NumeroDocumento" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\josue\\Documents\\1. Josue\\1. Programacion\\1. Proyectos\\2017\\Tienda de Deportes\\SportStore2014453\\src\\org\\josuerobledo\\reporte\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[exec SP_ReporteCompras $P{_NumeroDocumento}]]>
+	</queryString>
+	<field name="NumeroDocumento" class="java.lang.Integer"/>
+	<field name="Fecha" class="java.sql.Date"/>
+	<field name="Direccion" class="java.lang.String"/>
+	<field name="Total" class="java.math.BigDecimal"/>
+	<field name="RazonSocial" class="java.lang.String"/>
+	<title>
+		<band height="129" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="35" y="0" width="506" height="91" backcolor="#FFFFFF" uuid="29861fbc-0820-4e25-bfaa-feeb9995d8e3"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="204" y="60" width="160" height="31" uuid="928e2c65-d1c0-402d-9159-b668afa19f5b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="17"/>
+				</textElement>
+				<text><![CDATA[Reporte de Compras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="14" width="296" height="46" uuid="a680679a-740e-4bdc-8624-d488fb147679"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[SPORT STORE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="158" splitType="Stretch">
+			<staticText>
+				<reportElement x="59" y="31" width="53" height="18" uuid="36f81412-ef62-4953-8501-f2a0ba1f6d8a"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="104" width="90" height="20" uuid="a361c2dc-c18a-4b58-88a4-a8e4d440e5d3"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="0" width="104" height="18" uuid="7c675068-280d-472e-afb3-a46bee854a32"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Documento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="62" width="90" height="23" uuid="5573cdab-527c-4bfc-9d68-e2d3a3841344"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Razon Social:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="166" y="0" width="304" height="18" uuid="7665d9f4-06fe-4cc3-bcee-8c81fef70133"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NumeroDocumento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="112" y="29" width="164" height="20" uuid="3df7d0cf-d93a-4319-8e54-edab0def39f6"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="110" width="350" height="41" uuid="ef3c28be-4f8c-4a63-ab86-df6fc9a1aa38"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="65" width="340" height="20" uuid="86793353-984b-402c-847b-dcb070696856"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RazonSocial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="59">
+			<subreport>
+				<reportElement x="35" y="0" width="521" height="46" uuid="904ac330-81c1-4fa2-ac66-b4fe9d3ce887"/>
+				<subreportParameter name="_NumeroDocumento1">
+					<subreportParameterExpression><![CDATA[$F{NumeroDocumento}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "ReporteDetalleCompra.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="42">
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="433" y="3" width="105" height="20" uuid="ef14d2ea-3561-4730-99d0-467d67a54dfc"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="392" y="0" width="40" height="23" uuid="f7905d65-343b-4311-ad02-c09c1aaf7ab1"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

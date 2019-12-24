@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josuerobledo.controller.CorreoClienteController">
+   <children>
+      <ImageView fitHeight="545.0" fitWidth="542.0">
+         <image>
+            <Image url="@../imagenes/2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imaInicio" fitHeight="33.0" fitWidth="33.0" layoutX="457.0" layoutY="473.0" onMouseClicked="#RegresarInicio">
+         <image>
+            <Image url="@../imagenes/Inicio.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="102.0" layoutY="145.0" prefHeight="33.0" prefWidth="68.0" text="Cliente">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCliente" layoutX="177.0" layoutY="149.0" prefHeight="25.0" prefWidth="240.0" promptText="Seleccione un Cliente..." />
+      <Button fx:id="btnNuevo" layoutX="104.0" layoutY="473.0" mnemonicParsing="false" onAction="#BotonNuevo" prefHeight="33.0" prefWidth="74.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="195.0" layoutY="473.0" mnemonicParsing="false" onAction="#BotonEliminar" prefHeight="33.0" prefWidth="74.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="287.0" layoutY="473.0" mnemonicParsing="false" onAction="#BotonEditar" prefHeight="33.0" prefWidth="74.0" text="Editar" />
+      <TableView fx:id="tblCorreoClientes" layoutX="60.0" layoutY="258.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="430.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="85.0" text="Codigo" />
+            <TableColumn fx:id="colCliente" prefWidth="123.0" text="Cliente" />
+            <TableColumn fx:id="colCorreo" prefWidth="109.0" text="Correo" />
+            <TableColumn fx:id="colDescripcion" prefWidth="112.0" text="Descripcion" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtCorreo" layoutX="177.0" layoutY="185.0" prefHeight="26.0" prefWidth="240.0" />
+      <Label layoutX="112.0" layoutY="182.0" prefHeight="33.0" prefWidth="58.0" text="Correo">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="41.0" prefHeight="50.0" prefWidth="252.0" text="Correo Clientes">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="212.0" prefHeight="33.0" prefWidth="74.0" text="Descripcion">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcion" layoutX="177.0" layoutY="216.0" prefHeight="26.0" prefWidth="240.0" />
+      <Button fx:id="btnRegresar" layoutX="376.0" layoutY="473.0" mnemonicParsing="false" onAction="#BotonRegresar" prefHeight="33.0" prefWidth="74.0" text="Regresar" />
+      <ComboBox fx:id="cmbCodigo" layoutX="177.0" layoutY="116.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="116.0" layoutY="112.0" prefHeight="33.0" prefWidth="51.0" text="Codigo">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
