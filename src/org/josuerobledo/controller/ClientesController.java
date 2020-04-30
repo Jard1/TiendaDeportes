@@ -212,19 +212,22 @@ public class ClientesController implements Initializable {
         //al ejecutarse este metodo los botones se habilitan 
         if(contNuevo==1){
             
-            btnEditar.setDisable(true);
-            btnEditar.setDisable(true);
             cmbCodigo.setDisable(true);
             btnCorreo.setDisable(true);
+            
+            btnEditar.setDisable(true);
+            
+            btnEditar.setDisable(true);
+            
             btnTelefonos.setDisable(true);
             
             txtNombre.setDisable(false);
             txtNit.setDisable(false);
             txtDireccion.setDisable(false);     
             
-            txtNombre.setText("");
-            txtNit.setText("");
-            txtDireccion.setText("");
+            txtNombre.setText("default");
+            txtNit.setText("default");
+            txtDireccion.setText("default");
             
             cmbCodigo.setValue(null); //Inserte para resetear el combobox
             btnNuevo.setText("Guardar");
@@ -260,7 +263,7 @@ public class ClientesController implements Initializable {
             if(tblClientes.getSelectionModel().getSelectedItem() != null){ 
                 try{
                     //hay que preguntar si esta seguro de borrarlo, por seguridad
-                    int confirmar = JOptionPane.showConfirmDialog(null,"¿En realidad quiere borrar este dato?", "Advertencia",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+                    int confirmar = JOptionPane.showConfirmDialog(null,"¿Esta seguro de que quiere borrar este dato?", "Advertencia",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
                     if(confirmar==JOptionPane.YES_OPTION){
                         PreparedStatement procedimiento = ConexionSql.getInstancia().getConeccion().prepareCall("{call SP_EliminarClientes (?)}");
                         procedimiento.setInt(1, ((Clientes)tblClientes.getSelectionModel().getSelectedItem()).getCodigoCliente());
@@ -275,7 +278,7 @@ public class ClientesController implements Initializable {
                 }
             }  
             else{
-                JOptionPane.showMessageDialog(null,"Tiene que seleccionar un elemento para eliminarlo", "ERROR",2);
+                JOptionPane.showMessageDialog(null,"Tiene que seleccionar un elemento para eliminarlo, gracias.", "ERROR",2);
                 
             }
         }

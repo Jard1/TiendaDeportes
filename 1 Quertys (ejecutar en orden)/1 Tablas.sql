@@ -1,26 +1,26 @@
-create database DBSports2014453
+create database DataBSSports2014453
 go
 
-use DBSports2014453
+use DataBSSports2014453
 go
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 create table Categoria(
 	CodigoCategoria int not null primary key identity,
-	DescripcionCategoria varchar(max)
+	DescripcionCategoria varchar(256)
 )
 go	
 
 create table Marcas(
 	CodigoMarca int not null primary key identity,
-	DescripcionMarcas varchar(max)
+	DescripcionMarcas varchar(256)
 )
 go
 	
 create table Talla(
 	CodigoTalla int not null primary key identity,
-	DescripcionTalla varchar(max)
+	DescripcionTalla varchar(256)
 )
 go
 
@@ -51,19 +51,19 @@ go
 
 create table Proveedores(
 	CodigoProveedor int primary key not null identity,
-	Direccion varchar(max),
-	ContactoPrincipal varchar(max),
-	RazonSocial varchar(max),
-	PaginaWeb  varchar(max),
-	Nit varchar(20),
+	Direccion varchar(256),
+	ContactoPrincipal varchar(256),
+	RazonSocial varchar(256),
+	PaginaWeb  varchar(256),
+	Nit varchar(25),
 	
 )
 go
 
 create table TelefonoProveedores(
 	CodigoTelefonoProveedor int primary key not null identity,
-	Numero varchar(8),
-	Descripcion varchar(max),
+	Numero varchar(10),
+	Descripcion varchar(256),
 	CodigoProveedor int
 
 	Constraint FK_TelefonoProveedores_Proveedores foreign key(CodigoProveedor) references Proveedores(CodigoProveedor)
@@ -72,8 +72,8 @@ go
 
 create table EmailProveedores(
 	CodigoEmailProveedor int primary key not null identity,
-	Email varchar(max),
-	Descripcion varchar(max),
+	Email varchar(30),
+	Descripcion varchar(256),
 	CodigoProveedor int
 
 	Constraint FK_EmailProveedores_Proveedores foreign key (CodigoProveedor) references Proveedores(CodigoProveedor)
@@ -86,7 +86,7 @@ create table EmailProveedores(
 create table Clientes(
 	CodigoCliente int not null primary key identity(1,1) ,
 	Nombre varchar(256) not null,
-	nit varchar(20) not null,
+	nit varchar(10) not null,
 	Direccion varchar(256) not null
 )
 go
@@ -94,7 +94,7 @@ go
 create table TelefonoClientes(
 	CodigoTelefonoCliente int not null primary key identity,
 	Descripcion varchar(max),
-	Numero varchar(8),
+	Numero varchar(10),
 	CodigoCliente int
 
 	constraint FK_TelefonoClientes_Clientes foreign key (CodigoCliente) references CLientes(CodigoCliente)
@@ -103,8 +103,8 @@ go
 
 create table EmailCliente(
 	CodigoEmailCliente int not null primary key identity,
-	Email varchar(max),
-	Descripcion varchar(max),
+	Email varchar(256),
+	Descripcion varchar(256),
 	CodigoCliente int
 
 	constraint FK_EmailCliente_Clientes foreign key (CodigoCliente) references CLientes(CodigoCliente)
@@ -160,7 +160,7 @@ create table DetalleCompras(
 
 	CodigoDetalleCompras int not null primary key identity,
 	CodigoProducto int,
-	Cantidad int,
+	NumeroCantidad int,
 	CostoUnitario money null default 0.00,
 	NumeroDocumento int,
 	
